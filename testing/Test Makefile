@@ -1,0 +1,8 @@
+CFLAGS = -Wall -Wextra -Wfloat-equal -pedantic -ansi -O2
+
+testteletext: testteletext.c teletext.h neillsdl.c neillsdl.h
+	gcc testteletext.c neillsdl.c -o testteletext -I include -L lib -l SDL2-2.0.0 $(CFLAGS)
+
+clean:
+	rm -fr teletext
+
